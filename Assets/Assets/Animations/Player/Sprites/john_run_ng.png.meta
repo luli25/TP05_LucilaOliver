@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 61df77010a498da41a63df1d24483821
+guid: 7bae72c7352f3244caf9ba49f9426f85
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 28
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: john_idle_ng_0
+      name: john_run_ng_0
       rect:
         serializedVersion: 2
         x: 5
         y: 0
-        width: 19
-        height: 18
+        width: 20
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,40 +137,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46366efe8b1cee243bb9935674921fb5
-      internalID: 1889873924
+      spriteID: 3d75f3f4b4157174f981a6e1d858a7fc
+      internalID: -883286086
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: john_idle_ng_1
+      name: john_run_ng_1
       rect:
         serializedVersion: 2
         x: 31
         y: 0
-        width: 19
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 787970bd1dfcebd489c8210f4e37922a
-      internalID: 204089398
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: john_idle_ng_2
-      rect:
-        serializedVersion: 2
-        x: 57
-        y: 0
-        width: 19
+        width: 20
         height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -179,20 +158,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3a344fe138ec804b8ca8d4af830c427
-      internalID: 1188575016
+      spriteID: 12d0b57f790b2d343a7060c9f055a73c
+      internalID: 1002927634
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: john_idle_ng_3
+      name: john_run_ng_2
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 0
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a2f9ca19b13aa147a104fda21dc9393
+      internalID: -1992496435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: john_run_ng_3
       rect:
         serializedVersion: 2
         x: 83
         y: 0
-        width: 19
-        height: 18
+        width: 20
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,19 +200,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 468d594be0bfc794abd0749289443655
-      internalID: -219806640
+      spriteID: 509b20166fd5c6748af18a1add596172
+      internalID: -869016358
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: john_idle_ng_4
+      name: john_run_ng_4
       rect:
         serializedVersion: 2
         x: 109
-        y: 0
-        width: 19
+        y: 1
+        width: 20
         height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -221,8 +221,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eac37a66e66a6974f9b39da79e61ff3b
-      internalID: -580438670
+      spriteID: 274873ed7ddf7c44ebf7f0e56211972f
+      internalID: 794834237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: john_run_ng_5
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 0
+        width: 19
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47336e4472419fd4c9c283971f25bc2e
+      internalID: 1693560782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: john_run_ng_6
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 0
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c97f793a585fdc4087cc4bcaa64394a
+      internalID: 1567909357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: john_run_ng_7
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 0
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47dcba9209868ef4c9601475718a58d4
+      internalID: -1108230385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: john_run_ng_8
+      rect:
+        serializedVersion: 2
+        x: 212
+        y: 0
+        width: 21
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 584611c2add5e5149a48a0bac26c92dd
+      internalID: -1621836206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: john_run_ng_9
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 1
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c32671d21f900904f94ae0376b54206d
+      internalID: -295546696
       vertices: []
       indices: 
       edges: []
@@ -238,11 +343,16 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      john_idle_ng_0: 1889873924
-      john_idle_ng_1: 204089398
-      john_idle_ng_2: 1188575016
-      john_idle_ng_3: -219806640
-      john_idle_ng_4: -580438670
+      john_run_ng_0: -883286086
+      john_run_ng_1: 1002927634
+      john_run_ng_2: -1992496435
+      john_run_ng_3: -869016358
+      john_run_ng_4: 794834237
+      john_run_ng_5: 1693560782
+      john_run_ng_6: 1567909357
+      john_run_ng_7: -1108230385
+      john_run_ng_8: -1621836206
+      john_run_ng_9: -295546696
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
