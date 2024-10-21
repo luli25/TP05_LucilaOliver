@@ -23,6 +23,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        Move();
+    }
+
+    private void Move()
+    {
         if (Input.GetKey(KeyCode.D))
         {
             anim.SetBool("isRunning", true);
