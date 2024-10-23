@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour
     private Animator anim;
 
     [SerializeField]
-    private float speed = 10f;
+    private PlayerConfig playerData;
 
     private Rigidbody2D rb;
 
@@ -32,22 +32,18 @@ public class PlayerController : MonoBehaviour
         {
             anim.SetBool("isRunning", true);
             playerSprite.flipX = false;
-            rb.velocity = Vector2.right * speed * Time.deltaTime;
-        }
-        else
-        {
-            anim.SetBool("isRunning", false);
-        }
+            rb.velocity = Vector2.right * playerData.speed * Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.A))
+        } else if (Input.GetKey(KeyCode.A))
         {
             anim.SetBool("isRunning", true);
             playerSprite.flipX = true;
-            rb.velocity = Vector2.left * speed * Time.deltaTime;
-        }
-        else
+            rb.velocity = Vector2.left * playerData.speed * Time.deltaTime;
+
+        } else
         {
             anim.SetBool("isRunning", false);
         }
+ 
     }
 }
