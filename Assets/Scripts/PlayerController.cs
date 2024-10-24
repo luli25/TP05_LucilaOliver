@@ -14,8 +14,9 @@ public class PlayerController : MonoBehaviour
     private GroundDetector detector;
 
     private Rigidbody2D rb;
-
     private SpriteRenderer playerSprite;
+
+    private bool isJumping = false;
 
     void Start()
     {
@@ -23,7 +24,6 @@ public class PlayerController : MonoBehaviour
         playerSprite = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         Move();
@@ -32,32 +32,33 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
-        if (Input.GetKey(KeyCode.D))
-        {
-            anim.SetBool("isRunning", true);
-            playerSprite.flipX = false;
-            rb.velocity = Vector2.right * playerData.speed * Time.deltaTime;
-
-        } else if (Input.GetKey(KeyCode.A))
-        {
-            anim.SetBool("isRunning", true);
-            playerSprite.flipX = true;
-            rb.velocity = Vector2.left * playerData.speed * Time.deltaTime;
-
-        } else
-        {
-            anim.SetBool("isRunning", false);
-        }
- 
+        float moveInput = Input.GetKey(KeyCode.D) ? 1 : (Input.GetKey(KeyCode.A) ? -1 : 0);
+        rb.velocity = new Vector2(moveInput * playerData.speed, rb.velocity.y);
+        anim.SetBool("isRunning", moveInput != 0);
+        playerSprite.flipX = moveInput < 0;
     }
 
     private void Jump()
     {
-        if(Input.GetKey(KeyCode.Space) && detector.isGrounded)
+        if (detector.isGrounded)
         {
-            detector.isGrounded = false;
-            anim.SetTrigger("onJump");
-            rb.AddForce(Vector2.up * playerData.jumpForce * Time.deltaTime, ForceMode2D.Impulse);
+            isJumping = false;
+
+            if (Input.GetKey(KeyCode.Space))
+            {
+                isJumping = true;
+                detector.isGrounded = false;
+                anim.SetTrigger("onJump");
+                rb.AddForce(Vector2.up * playerData.jumpForce, ForceMode2D.Impulse);
+            }
+        }
+
+        if (isJumping && Input.GetKey(KeyCode.Space))
+        {
+            if (rb.velocity.y > 0)
+            {
+                rb.AddForce(Vector2.up * playerData.jumpControlForce * Time.deltaTime, ForceMode2D.Force);
+            }
         }
     }
 }

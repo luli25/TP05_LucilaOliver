@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d85f46ed1bd98344fbb463b134f15e16, type: 3}
   m_Name: PlayerData
   m_EditorClassIdentifier: 
-  speed: 150
+  speed: 5
   health: 100
   lives: 3
-  jumpForce: 200
+  jumpForce: 6
+  jumpControlForce: 5

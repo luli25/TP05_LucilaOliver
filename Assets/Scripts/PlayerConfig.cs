@@ -8,6 +8,7 @@ public class PlayerConfig : ScriptableObject
     public float health = 100f;
     public int lives = 3;
     public float jumpForce = 5f;
+    public float jumpControlForce = 5f;
 
 }
 
