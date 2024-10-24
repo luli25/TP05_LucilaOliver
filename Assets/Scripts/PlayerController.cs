@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     void FixedUpdate()
     {
         Move();
+        Jump();
     }
 
     private void Move()
@@ -52,7 +53,7 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Space))
         {
             anim.SetTrigger("onJump");
-            rb.AddForce(Vector2.up * playerData.jumpForce * Time.deltaTime);
+            rb.AddForce(Vector2.up * playerData.jumpForce * Time.deltaTime, ForceMode2D.Impulse);
         }
     }
 }
