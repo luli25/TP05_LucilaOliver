@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 61df77010a498da41a63df1d24483821
+guid: 60a0962f9e9f17942a4108b895785e31
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,12 +123,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: john_idle_ng_0
+      name: john_jump_ng_0
       rect:
         serializedVersion: 2
-        x: 5
+        x: 4
         y: 0
-        width: 19
+        width: 20
         height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -137,19 +137,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46366efe8b1cee243bb9935674921fb5
-      internalID: 1889873924
+      spriteID: 01c5e6fe31da81d43897c2a25d0ed802
+      internalID: 1747415873
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: john_idle_ng_1
+      name: john_jump_ng_1
       rect:
         serializedVersion: 2
-        x: 31
+        x: 30
         y: 0
-        width: 19
+        width: 20
         height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 787970bd1dfcebd489c8210f4e37922a
-      internalID: 204089398
+      spriteID: 8d81195b8c0766d46879238503aae856
+      internalID: -1134658994
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: john_idle_ng_2
+      name: john_jump_ng_2
       rect:
         serializedVersion: 2
-        x: 57
+        x: 56
         y: 0
-        width: 19
-        height: 18
+        width: 20
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3a344fe138ec804b8ca8d4af830c427
-      internalID: 1188575016
+      spriteID: 046a190577af14645afdc599b2c4407c
+      internalID: -2007802819
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: john_idle_ng_3
+      name: john_jump_ng_3
       rect:
         serializedVersion: 2
         x: 83
-        y: 0
-        width: 19
-        height: 18
+        y: 1
+        width: 18
+        height: 19
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,18 +200,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 468d594be0bfc794abd0749289443655
-      internalID: -219806640
+      spriteID: c852e135f7e15d2429abb79b00b14c06
+      internalID: 798199953
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: john_idle_ng_4
+      name: john_jump_ng_4
       rect:
         serializedVersion: 2
         x: 109
-        y: 0
+        y: 3
         width: 19
         height: 18
       alignment: 0
@@ -221,8 +221,92 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eac37a66e66a6974f9b39da79e61ff3b
-      internalID: -580438670
+      spriteID: a037dda154ea20c4ca8d3adefa6ef641
+      internalID: 207613924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: john_jump_ng_5
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 4
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71a8fc96406229149a6ca4cc5b3bbd01
+      internalID: 921656055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: john_jump_ng_6
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 4
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b1255f4202dc942af5a9b7fd4ec64c
+      internalID: -864438649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: john_jump_ng_7
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 2
+        width: 20
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c617e3a0a5520db4e9778357ef1781eb
+      internalID: 740338766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: john_jump_ng_8
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 1
+        width: 21
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5527d6d8a3d9d72449f5d534cc447bad
+      internalID: -2137913101
       vertices: []
       indices: 
       edges: []
@@ -238,11 +322,15 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      john_idle_ng_0: 1889873924
-      john_idle_ng_1: 204089398
-      john_idle_ng_2: 1188575016
-      john_idle_ng_3: -219806640
-      john_idle_ng_4: -580438670
+      john_jump_ng_0: 1747415873
+      john_jump_ng_1: -1134658994
+      john_jump_ng_2: -2007802819
+      john_jump_ng_3: 798199953
+      john_jump_ng_4: 207613924
+      john_jump_ng_5: 921656055
+      john_jump_ng_6: -864438649
+      john_jump_ng_7: 740338766
+      john_jump_ng_8: -2137913101
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

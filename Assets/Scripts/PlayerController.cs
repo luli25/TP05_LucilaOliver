@@ -46,4 +46,13 @@ public class PlayerController : MonoBehaviour
         }
  
     }
+
+    private void Jump()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            anim.SetTrigger("onJump");
+            rb.AddForce(Vector2.up * playerData.jumpForce * Time.deltaTime);
+        }
+    }
 }

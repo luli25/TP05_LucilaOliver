@@ -1,7 +1,7 @@
 using UnityEditor.Rendering;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "PlayerData", menuName = "ScriptableObjects/PlayerConfig", order = 1)]
+[CreateAssetMenu(fileName = "PlayerData", menuName = "Player/PlayerConfig", order = 1)]
 public class PlayerConfig : ScriptableObject
 {
     public float speed = 150f;
