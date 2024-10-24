@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GroundDetector : MonoBehaviour
@@ -9,8 +7,11 @@ public class GroundDetector : MonoBehaviour
 
     public bool isGrounded = false;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+        if(!Utilities7.CheckLayerInMask(playerLayer, collision.gameObject.layer))
+        {
+            isGrounded = true;
+        }
     }
 }

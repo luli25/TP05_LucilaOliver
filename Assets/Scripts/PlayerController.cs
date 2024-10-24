@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private PlayerConfig playerData;
 
+    [SerializeField]
+    private GroundDetector detector;
+
     private Rigidbody2D rb;
 
     private SpriteRenderer playerSprite;
@@ -50,8 +53,9 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKey(KeyCode.Space) && detector.isGrounded)
         {
+            detector.isGrounded = false;
             anim.SetTrigger("onJump");
             rb.AddForce(Vector2.up * playerData.jumpForce * Time.deltaTime, ForceMode2D.Impulse);
         }
