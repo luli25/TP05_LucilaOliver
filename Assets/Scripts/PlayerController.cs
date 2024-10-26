@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     private bool isJumping = false;
     private bool isCrouching = false;
 
+    private bool isFacingRight = true;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -37,8 +39,18 @@ public class PlayerController : MonoBehaviour
         float moveInput = Input.GetKey(KeyCode.D) ? 1 : (Input.GetKey(KeyCode.A) ? -1 : 0);
         rb.velocity = new Vector2(moveInput * playerData.speed, rb.velocity.y);
         anim.SetBool("isRunning", moveInput != 0);
-        playerSprite.flipX = moveInput < 0;
+        //playerSprite.flipX = moveInput < 0;
+
+        if(moveInput > 0 && !isFacingRight)
+        {
+            Flip();
+
+        } else if(moveInput < 0 && isFacingRight)
+        {
+            Flip();
+        }
     }
+
 
     private void Jump()
     {
@@ -59,23 +71,31 @@ public class PlayerController : MonoBehaviour
         {
             if (rb.velocity.y > 0)
             {
-                rb.AddForce(Vector2.up * playerData.jumpControlForce * Time.deltaTime, ForceMode2D.Force);
+                rb.AddForce(Vector2.up * playerData.jumpControlForce * Time.deltaTime, ForceMode2D.Impulse);
             }
         }
     }
 
     private void Crouch()
     {
-        if(detector.isGrounded)
+        if (detector.isGrounded)
         {
-            if(Input.GetKeyDown(KeyCode.S))
+            if (Input.GetKeyDown(KeyCode.S))
             {
                 anim.SetBool("isCrouching", true);
 
-            } else if(Input.GetKeyUp(KeyCode.S))
+            }
+            else if (Input.GetKeyUp(KeyCode.S))
             {
                 anim.SetBool("isCrouching", false);
             }
         }
+    }
+
+    private void Flip()
+    {
+        isFacingRight = !isFacingRight;
+        //playerSprite.flipX = !isFacingRight;
+        transform.Rotate(0f, 180f, 0f);
     }
 }
