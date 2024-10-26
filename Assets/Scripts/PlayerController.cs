@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer playerSprite;
 
     private bool isJumping = false;
+    private bool isCrouching = false;
 
     void Start()
     {
@@ -24,10 +25,11 @@ public class PlayerController : MonoBehaviour
         playerSprite = GetComponent<SpriteRenderer>();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         Move();
         Jump();
+        Crouch();
     }
 
     private void Move()
@@ -58,6 +60,21 @@ public class PlayerController : MonoBehaviour
             if (rb.velocity.y > 0)
             {
                 rb.AddForce(Vector2.up * playerData.jumpControlForce * Time.deltaTime, ForceMode2D.Force);
+            }
+        }
+    }
+
+    private void Crouch()
+    {
+        if(detector.isGrounded)
+        {
+            if(Input.GetKeyDown(KeyCode.S))
+            {
+                anim.SetBool("isCrouching", true);
+
+            } else if(Input.GetKeyUp(KeyCode.S))
+            {
+                anim.SetBool("isCrouching", false);
             }
         }
     }
