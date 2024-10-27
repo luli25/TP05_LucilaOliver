@@ -9,6 +9,9 @@ public class PlayerConfig : ScriptableObject
     public int lives = 3;
     public float jumpForce = 5f;
     public float jumpControlForce = 5f;
+    public float maxHealth = 100f;
+    public int currentAmmo = 30;
+    public int maxAmmo = 150;
 
 }
 
