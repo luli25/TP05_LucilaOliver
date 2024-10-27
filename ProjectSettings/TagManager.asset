@@ -50,3 +50,9 @@ TagManager:
   - name: Player
     uniqueID: 2115939695
     locked: 0
+  - name: Enemy
+    uniqueID: 598533221
+    locked: 0
+  - name: HealthBar
+    uniqueID: 2825890585
+    locked: 0
