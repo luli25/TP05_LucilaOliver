@@ -12,6 +12,7 @@ public class PlayerConfig : ScriptableObject
     public float maxHealth = 100f;
     public int currentAmmo = 30;
     public int maxAmmo = 150;
+    public float damage = 20f;
 
 }
 

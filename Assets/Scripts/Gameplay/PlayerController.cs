@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -17,7 +15,6 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer playerSprite;
 
     private bool isJumping = false;
-    private bool isCrouching = false;
 
     private bool isFacingRight = true;
 
@@ -39,7 +36,6 @@ public class PlayerController : MonoBehaviour
         float moveInput = Input.GetKey(KeyCode.D) ? 1 : (Input.GetKey(KeyCode.A) ? -1 : 0);
         rb.velocity = new Vector2(moveInput * playerData.speed, rb.velocity.y);
         anim.SetBool("isRunning", moveInput != 0);
-        //playerSprite.flipX = moveInput < 0;
 
         if(moveInput > 0 && !isFacingRight)
         {
@@ -95,7 +91,6 @@ public class PlayerController : MonoBehaviour
     private void Flip()
     {
         isFacingRight = !isFacingRight;
-        //playerSprite.flipX = !isFacingRight;
         transform.Rotate(0f, 180f, 0f);
     }
 }

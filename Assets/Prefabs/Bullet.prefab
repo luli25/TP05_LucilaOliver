@@ -162,3 +162,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletSpeed: 20
+  playerConfig: {fileID: 11400000, guid: 9bc4ab7d324fabb4d96f9d1f38d78542, type: 2}
+  bulletImpact: {fileID: 1542017087907584015, guid: 45832ef268b7f9641906d9513671de9c, type: 3}

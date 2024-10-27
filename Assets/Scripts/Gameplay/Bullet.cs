@@ -1,11 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
     [SerializeField]
     private float bulletSpeed = 20f;
+
+    [SerializeField]
+    private PlayerConfig playerConfig;
+
+    [SerializeField]
+    private GameObject bulletImpact;
 
     private Rigidbody2D rb;
 
@@ -20,5 +24,21 @@ public class Bullet : MonoBehaviour
 
         rb.velocity = transform.right * bulletSpeed;
 
+    }
+
+    private void OnTriggerEnter2D(Collider2D hitInfo)
+    {
+        if(hitInfo.CompareTag("Enemy"))
+        {
+            EnemyController enemy = hitInfo.GetComponent<EnemyController>();
+            if(enemy != null)
+            {
+                enemy.TakeDamage(playerConfig.damage);
+            }
+
+            Instantiate(bulletImpact, transform.position, transform.rotation);
+
+            Destroy(gameObject);
+        }
     }
 }
