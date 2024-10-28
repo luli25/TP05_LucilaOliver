@@ -8,13 +8,22 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     private GameObject bulletPrefab;
 
+    public bool isShooting;
+
 
     void Update()
     {
 
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
+            isShooting = true;
             Shoot();
+
+        }
+        else if (Input.GetMouseButtonUp(0))
+        {
+
+            isShooting = false;
         }
     }
 

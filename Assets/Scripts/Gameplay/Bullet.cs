@@ -9,6 +9,9 @@ public class Bullet : MonoBehaviour
     private PlayerConfig playerConfig;
 
     [SerializeField]
+    private EnemyConfig enemyConfig;
+
+    [SerializeField]
     private GameObject bulletImpact;
 
     private Rigidbody2D rb;
@@ -36,9 +39,18 @@ public class Bullet : MonoBehaviour
                 enemy.TakeDamage(playerConfig.damage);
             }
 
-            Instantiate(bulletImpact, transform.position, transform.rotation);
-
-            Destroy(gameObject);
+            
+        } else if(hitInfo.CompareTag("Player"))
+        {
+            PlayerController player = hitInfo.GetComponent<PlayerController>();
+            if(player != null)
+            {
+                player.TakeDamageFromEnemy(enemyConfig.damage);
+            }
         }
+
+        Instantiate(bulletImpact, transform.position, transform.rotation);
+
+        Destroy(gameObject);
     }
 }

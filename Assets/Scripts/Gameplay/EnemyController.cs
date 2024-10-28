@@ -15,12 +15,12 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     private HealthBar healthBar;
 
-    private Rigidbody rb2;
+    private Rigidbody2D rb2;
     private SpriteRenderer sprite;
 
     void Start()
     {
-        rb2 = GetComponent<Rigidbody>();
+        rb2 = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         enemyConfig.health = enemyConfig.maxHealth;
     }
