@@ -43,6 +43,7 @@ public class Bullet : MonoBehaviour
         } else if(hitInfo.CompareTag("Player"))
         {
             PlayerController player = hitInfo.GetComponent<PlayerController>();
+
             if(player != null)
             {
                 player.TakeDamageFromEnemy(enemyConfig.damage);

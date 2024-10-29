@@ -5410,7 +5410,6 @@ GameObject:
   - component: {fileID: 1256740436}
   - component: {fileID: 1256740435}
   - component: {fileID: 1256740440}
-  - component: {fileID: 1256740441}
   m_Layer: 0
   m_Name: Grunt
   m_TagString: Enemy
@@ -5595,20 +5594,6 @@ MonoBehaviour:
   enemyConfig: {fileID: 11400000, guid: 7b8264a5bc6102243bc90cbbce360727, type: 2}
   healthSlider: {fileID: 523281811}
   healthBar: {fileID: 523281812}
---- !u!114 &1256740441
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1256740434}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e5baa0deb3341b04780be26daec378b6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 1347221290}
-  speed: 5
 --- !u!1 &1347221290
 GameObject:
   m_ObjectHideFlags: 0
