@@ -5410,6 +5410,7 @@ GameObject:
   - component: {fileID: 1256740436}
   - component: {fileID: 1256740435}
   - component: {fileID: 1256740440}
+  - component: {fileID: 1256740441}
   m_Layer: 0
   m_Name: Grunt
   m_TagString: Enemy
@@ -5571,11 +5572,12 @@ Transform:
   m_GameObject: {fileID: 1256740434}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.2560959, y: -0.17619038, z: 0.0054694456}
+  m_LocalPosition: {x: 8.2, y: -0.17619038, z: 0.0054694456}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1415105152}
+  - {fileID: 1546434691}
   m_Father: {fileID: 519946473}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1256740440
@@ -5594,6 +5596,23 @@ MonoBehaviour:
   enemyConfig: {fileID: 11400000, guid: 7b8264a5bc6102243bc90cbbce360727, type: 2}
   healthSlider: {fileID: 523281811}
   healthBar: {fileID: 523281812}
+--- !u!114 &1256740441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1256740434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f02f5d011ee5034b85113d94a9149e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  seekRadius: 5
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  playerTransform: {fileID: 1347221293}
 --- !u!1 &1347221290
 GameObject:
   m_ObjectHideFlags: 0
@@ -5996,6 +6015,37 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   isGrounded: 0
+--- !u!1 &1546434690
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1546434691}
+  m_Layer: 0
+  m_Name: FirePoint_e
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1546434691
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546434690}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.642, y: -0.204, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1256740439}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1559197307
 GameObject:
   m_ObjectHideFlags: 0
