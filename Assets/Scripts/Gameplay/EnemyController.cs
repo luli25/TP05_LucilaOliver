@@ -27,8 +27,7 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-        //rb2.velocity = Vector2.right * enemyConfig.speed;
-        //animator.SetBool("isRunning", true);
+        
     }
 
     public void TakeDamage(float damage)
