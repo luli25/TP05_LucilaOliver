@@ -13,15 +13,19 @@ public class EnemyBullet : MonoBehaviour
 
     private Rigidbody2D rb2;
 
+    private Transform playerTransform;
+
     void Start()
     {
         rb2 = GetComponent<Rigidbody2D>();
-    }
+        playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
 
+        if(playerTransform != null )
+        {
+            Vector2 direction = (playerTransform.position - transform.position).normalized;
+            rb2.velocity = direction * bulletSpeed;
+        }
 
-    void Update()
-    {
-        //rb2.velocity = Vector2.right * bulletSpeed;
     }
 
     private void OnTriggerEnter2D(Collider2D hitInfo)
