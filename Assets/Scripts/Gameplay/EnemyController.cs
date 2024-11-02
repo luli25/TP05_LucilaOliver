@@ -38,7 +38,7 @@ public class EnemyController : MonoBehaviour
     void Update()
     {
         distance = Vector2.Distance(transform.position, player.position);
-        animator.SetFloat("Distance", distance);
+        animator.SetFloat("distance", distance);
 
     }
 

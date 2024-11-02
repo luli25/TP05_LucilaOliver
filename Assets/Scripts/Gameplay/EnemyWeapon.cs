@@ -11,11 +11,11 @@ public class EnemyWeapon : MonoBehaviour
     
     void Update()
     {
-        ShootAt();
+        //ShootAt();
     }
 
     private void ShootAt()
     {
-        Instantiate(enemyBulletPrefab, firePoint_e.position, firePoint_e.rotation);
+        //Instantiate(enemyBulletPrefab, firePoint_e.position, firePoint_e.rotation);
     }
 }

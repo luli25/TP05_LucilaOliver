@@ -10,8 +10,8 @@ public class PlayerConfig : ScriptableObject
     public float jumpForce = 5f;
     public float jumpControlForce = 5f;
     public float maxHealth = 100f;
-    public int currentAmmo = 30;
-    public int maxAmmo = 150;
+    public float maxArmor = 100f;
+    public float currentArmor;
     public float damage = 20f;
 
 }
