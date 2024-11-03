@@ -7,4 +7,5 @@ public class EnemyConfig : ScriptableObject
     public float speed = 150f;
     public float maxHealth = 100f;
     public float damage = 20f;
+    public float shootingRange = 4f;
 }
