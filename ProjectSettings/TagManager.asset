@@ -48,15 +48,18 @@ TagManager:
   - name: Ground
     uniqueID: 3840762053
     locked: 0
-  - name: Player
-    uniqueID: 2115939695
-    locked: 0
-  - name: Enemy
-    uniqueID: 598533221
-    locked: 0
   - name: HealthBar
     uniqueID: 2825890585
     locked: 0
   - name: ParticleEffect
     uniqueID: 2860522745
+    locked: 0
+  - name: Level
+    uniqueID: 62431401
+    locked: 0
+  - name: Enemy
+    uniqueID: 598533221
+    locked: 0
+  - name: Player
+    uniqueID: 2115939695
     locked: 0
