@@ -11,6 +11,9 @@ public class EnemyBullet : MonoBehaviour
     [SerializeField]
     private GameObject bulletImpact;
 
+    [SerializeField]
+    private EnemyConfig enemyConfig;
+
     private Rigidbody2D rb2;
 
     private Transform player;
@@ -39,7 +42,12 @@ public class EnemyBullet : MonoBehaviour
     {
         if(other.CompareTag("Player"))
         {
-            
+            PlayerController player = other.GetComponent<PlayerController>();
+            if(player != null)
+            {
+                player.TakeDamage(enemyConfig.damage);
+            }
+
             DestroyBullet();
         }
     }

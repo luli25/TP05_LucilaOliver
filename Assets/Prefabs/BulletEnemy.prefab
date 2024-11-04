@@ -163,3 +163,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletSpeed: 20
   bulletImpact: {fileID: 7300929573413124058, guid: 8616e7fe1ae9f2b49950987b01aa297b, type: 3}
+  enemyConfig: {fileID: 11400000, guid: 7b8264a5bc6102243bc90cbbce360727, type: 2}

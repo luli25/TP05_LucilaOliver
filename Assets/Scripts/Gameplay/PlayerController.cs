@@ -12,6 +12,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GroundDetector detector;
 
+    [SerializeField]
+    private Slider playerHealthBar;
+
+    [SerializeField]
+    private EnemyConfig enemyData;
+
+    [SerializeField]
+    private PlayerHealthBar healthBar;
+
     private Weapon weapon;
 
     private Rigidbody2D rb;
@@ -21,6 +30,8 @@ public class PlayerController : MonoBehaviour
 
     private bool isFacingRight = true;
 
+    private bool isTakingDamage = false;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -28,6 +39,7 @@ public class PlayerController : MonoBehaviour
         weapon = GetComponent<Weapon>();
 
         playerData.health = playerData.maxHealth;
+
     }
 
     void Update()
@@ -104,6 +116,24 @@ public class PlayerController : MonoBehaviour
     {
         isFacingRight = !isFacingRight;
         transform.Rotate(0f, 180f, 0f);
+    }
+
+    public void TakeDamage(float damage)
+    {
+        playerData.health -= damage;
+        healthBar.SetHealth(playerData.health);
+        isTakingDamage = true;
+
+        if(isTakingDamage == true)
+        {
+            anim.Play("Hurt", 0);
+
+        }
+
+        if(playerData.health <= 0)
+        {
+            Die();
+        }
     }
     
 
