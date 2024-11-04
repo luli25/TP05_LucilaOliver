@@ -112,6 +112,7 @@ public class PlayerController : MonoBehaviour
         transform.Rotate(0f, 180f, 0f);
     }
 
+    
     public void TakeDamageFromEnemy(float damage)
     {
         anim.Play("Hurt", 0);
@@ -125,6 +126,7 @@ public class PlayerController : MonoBehaviour
             Die();
         }
     }
+    
 
     private void Die()
     {

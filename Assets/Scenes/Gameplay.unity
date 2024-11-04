@@ -7730,6 +7730,9 @@ MonoBehaviour:
   healthSlider: {fileID: 523281811}
   healthBar: {fileID: 523281812}
   player: {fileID: 1347221293}
+  startTimeBtwShots: 2
+  bulletPrefab: {fileID: 2286596977425911477, guid: f6081a44d368090478c278bf66970f31, type: 3}
+  firePoint: {fileID: 1546434691}
 --- !u!1 &1276726246
 GameObject:
   m_ObjectHideFlags: 0

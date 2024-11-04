@@ -1,4 +1,5 @@
 using Cinemachine;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,9 +20,19 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     private Transform player;
 
+    [SerializeField]
+    private float startTimeBtwShots;
+
+    [SerializeField]
+    private GameObject bulletPrefab;
+
+    [SerializeField]
+    private Transform firePoint;
+
     private Rigidbody2D rb2;
     private SpriteRenderer sprite;
     private bool isFacingRight = true;
+    private float timeBtwShots;
 
 
     void Start()
@@ -29,6 +40,9 @@ public class EnemyController : MonoBehaviour
         rb2 = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
         enemyConfig.health = enemyConfig.maxHealth;
+
+
+        timeBtwShots = startTimeBtwShots;
     }
 
     void Update()
@@ -56,6 +70,9 @@ public class EnemyController : MonoBehaviour
         {
             Flip();
         }
+
+        ShootAt();
+        
     }
 
     public void TakeDamage(float damage)
@@ -80,7 +97,20 @@ public class EnemyController : MonoBehaviour
     void Flip()
     {
         isFacingRight = !isFacingRight;
-        sprite.flipX = !sprite.flipX;
+        transform.Rotate(0f, 180f, 0f);
+    }
+
+    private void ShootAt()
+    {
+        if(timeBtwShots <= 0)
+        {
+            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            timeBtwShots = startTimeBtwShots;
+
+        } else
+        {
+            timeBtwShots -= Time.deltaTime;
+        }
     }
 
 }
