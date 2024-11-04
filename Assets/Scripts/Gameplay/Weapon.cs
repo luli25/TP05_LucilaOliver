@@ -8,6 +8,9 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     private GameObject bulletPrefab;
 
+    [SerializeField]
+    private AudioSource bulletSound;
+
     public bool isShooting;
 
 
@@ -29,6 +32,7 @@ public class Weapon : MonoBehaviour
 
     private void Shoot()
     {
+        bulletSound.Play();
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 }

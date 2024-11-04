@@ -29,6 +29,9 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     private Transform firePoint;
 
+    [SerializeField]
+    private AudioSource source;
+
     private Rigidbody2D rb2;
     private SpriteRenderer sprite;
     private bool isFacingRight = true;
@@ -104,6 +107,7 @@ public class EnemyController : MonoBehaviour
     {
         if(timeBtwShots <= 0)
         {
+            source.Play();
             Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             timeBtwShots = startTimeBtwShots;
 
