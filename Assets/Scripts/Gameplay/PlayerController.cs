@@ -12,12 +12,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private GroundDetector detector;
 
-    [SerializeField]
-    private Slider healthBar;
-
-    [SerializeField]
-    private HealthBar health;
-
     private Weapon weapon;
 
     private Rigidbody2D rb;
@@ -110,21 +104,6 @@ public class PlayerController : MonoBehaviour
     {
         isFacingRight = !isFacingRight;
         transform.Rotate(0f, 180f, 0f);
-    }
-
-    
-    public void TakeDamageFromEnemy(float damage)
-    {
-        anim.Play("Hurt", 0);
-        playerData.health -= damage;
-        healthBar.value = playerData.health;
-
-        health.UpdateHealthBar(playerData.health, playerData.maxHealth);
-
-        if (playerData.health <= 0)
-        {
-            Die();
-        }
     }
     
 
