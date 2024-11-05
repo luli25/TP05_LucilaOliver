@@ -63,3 +63,6 @@ TagManager:
   - name: Player
     uniqueID: 2115939695
     locked: 0
+  - name: Respawn
+    uniqueID: 1203192819
+    locked: 0

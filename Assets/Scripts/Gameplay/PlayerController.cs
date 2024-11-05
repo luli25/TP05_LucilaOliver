@@ -21,6 +21,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private PlayerHealthBar healthBar;
 
+    [SerializeField]
+    private Transform respawnPoint;
+
     private Weapon weapon;
 
     private Rigidbody2D rb;
@@ -133,12 +136,25 @@ public class PlayerController : MonoBehaviour
         if(playerData.health <= 0)
         {
             Die();
+            
         }
     }
-    
+
+    public void ResetHealth()
+    {
+        playerData.health = playerData.maxHealth;
+        playerHealthBar.value = playerData.health;
+    }
+
+    public void ResetAnimation()
+    {
+        anim.Rebind();
+        anim.Update(0f);
+    }
 
     private void Die()
     {
         anim.Play("Dead", 0);
+        rb.transform.position = respawnPoint.position;
     }
 }

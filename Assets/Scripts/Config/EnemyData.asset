@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07f4aab68acab604e99cd7170bebf7bc, type: 3}
   m_Name: EnemyData
   m_EditorClassIdentifier: 
-  health: 100
+  health: 60
   speed: 2
   maxHealth: 100
   damage: 20
+  shootingRange: 4
+  detectionRange: 6

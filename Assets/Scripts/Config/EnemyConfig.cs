@@ -8,4 +8,5 @@ public class EnemyConfig : ScriptableObject
     public float maxHealth = 100f;
     public float damage = 20f;
     public float shootingRange = 4f;
+    public float detectionRange = 6f;
 }

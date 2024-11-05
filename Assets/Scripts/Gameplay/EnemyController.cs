@@ -53,34 +53,46 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-        if(Vector2.Distance(transform.position, player.position) > enemyConfig.shootingRange)
-        {
-            rb2.transform.position = Vector2.MoveTowards(transform.position, player.position, enemyConfig.speed * Time.deltaTime);
-            animator.SetBool("isRunning", true);
-            animator.SetBool("isShooting", false);
+        // Detectar la distancia entre el enemigo y el jugador
+        float distanceToPlayer = Vector2.Distance(transform.position, player.position);
+        Debug.Log(distanceToPlayer);
 
-        } else if(Vector2.Distance(transform.position, player.position) <= enemyConfig.shootingRange)
+        // Si el jugador está dentro del rango de detección
+        if (distanceToPlayer <= enemyConfig.detectionRange)
         {
+            // Si está fuera del rango de disparo, perseguir
+            if (distanceToPlayer > enemyConfig.shootingRange)
+            {
+                rb2.transform.position = Vector2.MoveTowards(transform.position, player.position, enemyConfig.speed * Time.deltaTime);
+                animator.SetBool("isRunning", true);
+                animator.SetBool("isShooting", false);
+            }
+            // Si está dentro del rango de disparo, disparar
+            else if (distanceToPlayer <= enemyConfig.shootingRange)
+            {
+                rb2.velocity = Vector2.zero;
+                animator.SetBool("isRunning", false);
+                animator.SetTrigger("Shoot");
+                ShootAt();
+                animator.SetBool("isShooting", true);
+            }
+        }
+        else
+        {
+            // Enemigo se queda quieto si el jugador está fuera del rango de detección
             rb2.velocity = Vector2.zero;
             animator.SetBool("isRunning", false);
-            animator.SetTrigger("Shoot");
-            animator.SetBool("isShooting", true);
-
-        } else if(Vector2.Distance(transform.position, player.position) > enemyConfig.shootingRange)
-        {
-            rb2.transform.position = Vector2.MoveTowards(transform.position, player.position, enemyConfig.speed * Time.deltaTime);
-            animator.SetBool("isRunning", true);
-            animator.SetTrigger("Chase");
-            
+            animator.SetBool("isShooting", false);
         }
 
+        // Girar el enemigo si es necesario
         if ((player.position.x < transform.position.x && isFacingRight) ||
             (player.position.x > transform.position.x && !isFacingRight))
         {
             Flip();
         }
 
-        ShootAt();
+        // Llamar a la función de disparo
         
     }
 
