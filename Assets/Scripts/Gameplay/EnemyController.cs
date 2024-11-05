@@ -32,6 +32,9 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     private AudioSource source;
 
+    [SerializeField]
+    private AudioSource enemyDead;
+
     private Rigidbody2D rb2;
     private SpriteRenderer sprite;
     private bool isFacingRight = true;
@@ -54,18 +57,21 @@ public class EnemyController : MonoBehaviour
         {
             rb2.transform.position = Vector2.MoveTowards(transform.position, player.position, enemyConfig.speed * Time.deltaTime);
             animator.SetBool("isRunning", true);
+            animator.SetBool("isShooting", false);
 
         } else if(Vector2.Distance(transform.position, player.position) <= enemyConfig.shootingRange)
         {
             rb2.velocity = Vector2.zero;
             animator.SetBool("isRunning", false);
             animator.SetTrigger("Shoot");
+            animator.SetBool("isShooting", true);
 
         } else if(Vector2.Distance(transform.position, player.position) > enemyConfig.shootingRange)
         {
             rb2.transform.position = Vector2.MoveTowards(transform.position, player.position, enemyConfig.speed * Time.deltaTime);
             animator.SetBool("isRunning", true);
             animator.SetTrigger("Chase");
+            
         }
 
         if ((player.position.x < transform.position.x && isFacingRight) ||
@@ -94,6 +100,7 @@ public class EnemyController : MonoBehaviour
     private void Die()
     {
         animator.Play("Dead", 0);
+        enemyDead.Play();
         Destroy(gameObject, 2f);
     }
 
